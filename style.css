@@ -1,0 +1,32 @@
+/* 01. VARIÁVEIS DO DESIGN SYSTEM: CORES E FONTES */
+/* ========================================================================= */
+
+/* Cores do Figma */
+:root {
+    /* Principal (Primárias) */
+    --color-principal-roxo: #914AF7;
+    --color-principal-ciano: #4FF4F0;
+    --color-principal-verde: #0C6C4F;
+    --color-principal-amarelo: #DFD54F;
+
+    /* Base (Cinzas) */
+    --color-gray-900: #121212; /* Fundo principal (BG-DARK) */
+    --color-gray-800: #1C1C1C; /* Fundo de componentes/cards */
+    --color-gray-700: #303030; /* Borda/Divisor sutil */
+    --color-gray-600: #7A7A7A; /* Texto secundário (cinza) */
+    --color-gray-500: #B1B1B1; /* Texto/Ícone claro */
+    --color-white: #FFFFFF; /* Texto principal */
+}
+
+.title-lg, .title-md {
+    font-family: 'Asap', sans-serif;
+    font-weight: 700; /* Bold */
+}
+.subtitle-lg {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400; /* Regular */
+}
+body {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400; /* Regular */
+}
