@@ -30,3 +30,122 @@ body {
     font-family: 'Maven Pro', sans-serif;
     font-weight: 400; /* Regular */
 }
+
+/* 02. BASE (RESET E ESTILOS GERAIS) */
+/* ========================================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-gray-900);
+    color: var(--color-white);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    color: var(--color-white);
+}
+
+section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Utility Class (Baseada na tipografia do Figma) */
+.text-secondary {
+    color: var(--color-gray-600);
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    line-height: 160%;
+}
+
+/* ========================================================================= */
+/* 03. COMPONENTES REUTILIZÁVEIS */
+/* ========================================================================= */
+
+/* --- Componente Project Card --- */
+
+.project-card {
+    background-color: var(--color-gray-800);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    border: 1px solid transparent; /* Para o hover */
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-principal-roxo); /* Cor de destaque no hover */
+}
+
+.project-image {
+    height: 200px;
+    background-color: var(--color-gray-700);
+    background-size: cover;
+    background-position: center;
+}
+
+.project-details {
+    padding: 15px;
+}
+
+.project-details h3 {
+    font-family: 'Asap', sans-serif; /* Title Md no Figma: 24px, Bold */
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.project-details p {
+    color: var(--color-gray-600);
+    font-family: 'Maven Pro', sans-serif; /* 16px Regular */
+    font-size: 1em;
+}
+
+
+/* --- Componente Social Button (Contato) --- */
+
+.contact-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--color-gray-800);
+    color: var(--color-white);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--color-gray-700);
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.contact-link:hover {
+    border-color: var(--color-principal-roxo);
+    background-color: #252525; /* Um pouco mais escuro que o normal */
+}
+
+.contact-link span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1em;
+}
+
+.contact-link i {
+    color: var(--color-principal-ciano); /* Ícone com cor de destaque */
+    font-size: 1.2em;
+}
+
+.contact-link span:last-child {
+    color: var(--color-gray-600); /* Seta ">" */
+    font-size: 1.5em;
+}
