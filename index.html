@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World! - Desenvolvedora Fullstack</title>
+    <title>Desenvolvedora Fullstack - Martina Santos</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&family=Inconsolata:wght@400&family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet">
     
@@ -12,57 +12,96 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="hero-section">
         <div class="hero-content">
-            <div class="profile-photo"></div> 
             
-            <p style="font-family: 'Asap', sans-serif; font-weight: 700; color: var(--color-gray-500);">
-                Hello World! Eu sou a **Martins Santos** e sou a
+            <img src="assets/fotoMarinaSantos.png" alt="Foto de Perfil de Martina Santos" class="profile-photo">
+            
+            <p class="text-intro">
+                Hello World! Meu nome é Martina Santos e sou
             </p>
             
             <h1 class="title-lg">Desenvolvedora Fullstack</h1> 
             
-            <p class="subtitle-lg text-secondary" style="font-family: 'Inconsolata', monospace; font-size: 1.3em;">
-                Desenvolvedora fullstack focada em construir experiências digitais acessíveis e centradas no usuário.
-                Sou apaixonada por transformar ideias em soluções funcionais e elegantes.
+            <p class="subtitle-lg text-secondary">
+                Transformo necessidades em aplicações reais, evolventes e funcionais. Desenvolvo sistemas através da
+                minha paixão pela tecnologia, contribuindo com soluções inovadoras e eficazes para desafios complexos.
             </p>
 
             <div class="skills-badges">
+                <span class="badge"><i class="fa-brands fa-github"></i> GitHub</span>
                 <span class="badge"><i class="fa-brands fa-html5"></i> HTML</span>
                 <span class="badge"><i class="fa-brands fa-css3-alt"></i> CSS</span>
-                <span class="badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="badge"><i class="fa-brands fa-js"></i> Javascript</span>
                 <span class="badge"><i class="fa-brands fa-react"></i> React</span>
                 <span class="badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
-                <span class="badge"><i class="fa-solid fa-database"></i> MySQL</span>
+            </div>
+            
+            <div style="margin-top: 50px;">
+                <i class="fa-solid fa-angle-down" style="color: var(--color-principal-roxo);"></i>
             </div>
         </div>
     </header>
 
     <section class="projects-section">
-        <h2 class="title-md" style="font-family: 'Asap', sans-serif; font-size: 2em;">Meus Trabalhos</h2>
+        <h2 class="title-md">Meus Trabalhos</h2>
         <p class="section-subtitle text-secondary">Veja os projetos em destaque</p>
 
         <div class="projects-grid">
+            
             <div class="project-card">
-                <div class="project-image" style="background-color: #DFD54F;"></div>
+                <div class="project-image project-1"></div>
                 <div class="project-details">
-                    <h3>Página de Receitas</h3>
-                    <p>Interface moderna para busca e visualização de receitas diversas.</p>
+                    <h3>Travelgram</h3>
+                    <p>Interface de rede social de viagens.</p>
                 </div>
             </div>
-    <div class="project-card">
-                <div class="project-image" style="background-color: #4FF4F0;"></div>
+
+            <div class="project-card">
+                <div class="project-image project-2"></div>
                 <div class="project-details">
-                    <h3>Dashboard Financeiro</h3>
-                    <p>Painel de controle com gráficos e tabelas para gestão financeira.</p>
+                    <h3>Tech News</h3>
+                    <p>Portal de notícias de tecnologia e IA.</p>
                 </div>
             </div>
             
+            <div class="project-card">
+                <div class="project-image project-3"></div>
+                <div class="project-details">
+                    <h3>Página de Receita</h3>
+                    <p>Cupcake de café com chantilly.</p>
+                </div>
             </div>
+
+            <div class="project-card">
+                <div class="project-image project-4"></div>
+                <div class="project-details">
+                    <h3>Zingen</h3>
+                    <p>Landing page para app de karaokê.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image project-5"></div>
+                <div class="project-details">
+                    <h3>Refund</h3>
+                    <p>Sistema de reembolso e despesas.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image project-6"></div>
+                <div class="project-details">
+                    <h3>Página de Login</h3>
+                    <p>Interface para agendamento de viagens.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="services-section">
-        <h2 class="title-md" style="font-family: 'Asap', sans-serif; font-size: 2em;">Como posso ajudar o seu negócio</h2>
+        <h2 class="title-md">Como posso ajudar o seu negócio</h2>
         <div class="services-grid">
             <div class="service-card">
                 <p class="service-icon" style="color: var(--color-principal-roxo);">
@@ -91,27 +130,5 @@
     </section>
 
     <section class="contact-section">
-        <h2 class="title-md" style="font-family: 'Asap', sans-serif; font-size: 2em;">Gostou do meu trabalho?</h2>
-        <p class="section-subtitle text-secondary">Entre em contato, vamos criar algo incrível juntos!</p>
-
-        <nav class="contact-links">
-            <a href="#" class="contact-link">
-                <span><i class="fa-brands fa-instagram"></i> Instagram</span>
-                <span>&gt;</span>
-            </a>
-            <a href="#" class="contact-link">
-                <span><i class="fa-brands fa-linkedin"></i> LinkedIn</span>
-                <span>&gt;</span>
-            </a>
-            <a href="#" class="contact-link">
-                <span><i class="fa-brands fa-github"></i> GitHub</span>
-                <span>&gt;</span>
-            </a>
-            <a href="mailto:contato@exemplo.com" class="contact-link">
-                <span><i class="fa-solid fa-envelope"></i> E-mail</span>
-                <span>&gt;</span>
-            </a>
-        </nav>
-    </section>
-</body>
-</html>
+        <h2 class="title-md">Gostou do meu trabalho?</h2>
+        <p class="section-subtitle text-secondary">Entre em contato
