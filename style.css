@@ -1,375 +1,182 @@
-/* ========================================================================= */
-/* 01. VARIÁVEIS DO DESIGN SYSTEM: CORES E FONTES */
-/* ========================================================================= */
-
-
 :root {
-    
+    /*Cores principais*/
+    --color-red: #E3646E;
+    --color-purple: #BB72E9;
+    --color-blue: #3996DB;
+    --color-green: #82BC4F;
+    --color-yellow: #EABD5F;
+
+    /*Base*/
+    --color-gray-100: #E2E4E9;
+    --color-gray-200: #C0C4CE;
+    --color-gray-300: #878EA1;
+    --color-gray-400: #292C34;
+    --color-gray-500: #16181D;
+    --color-gray-600: #0D0E11;
+
+    /* Cores usadas nos serviços (adicionadas para consistência) */
     --color-principal-roxo: #BB72E9;
     --color-principal-ciano: #3996DB;
     --color-principal-verde: #82BC4F;
-    --color-principal-amarelo: #EABD5F;
-    --color-borda-perfil: #E3646E; /* Cor rosa/vermelha da borda da foto */
-
-   
-     
-   
-    --color-gray-600:#0D0E11; /* Fundo de componentes/cards */
-    --color-gray-500:#16181D; /* Borda/Divisor sutil */
-    --color-gray-400:#292C34;
-    --color-gray-300:#878EA1 ; /* Texto secundário (cinza) */
-    --color-gray-200: #C0C4CE; /* Texto/Ícone claro */
-    --color-gray-100: #E2E4E9; /* Texto principal */
 }
+
+/* Importando a fonte Maven Pro que estava faltando */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap');
 
 /* Tipografia */
-.title-lg, .title-md {
+.title-lg {
     font-family: 'Asap', sans-serif;
-    font-weight: 700; /* Bold */
-}
-.subtitle-lg {
-    font-family: 'Inconsolata', monospace; /* Mantido se for o requisito */
-    font-weight: 400; /* Regular */
-}
-body {
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: 400; /* Regular */
+    font-size: 56px;
+    line-height: 120%; 
+    font-weight: bold;
 }
 
-/* ========================================================================= */
-/* 02. BASE (RESET E ESTILOS GERAIS) */
-/* ========================================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.title-md {
+    font-family: 'Asap', sans-serif; 
+    font-size: 24px;
+    line-height: 120%; 
+    font-weight: bold;
 }
 
-body {
-    background-color: var(--color-gray-900);
-    color: var(--color-white);
-    line-height: 1.6;
-    min-height: 100vh;
-}
-
-h1, h2, h3 {
-    color: var(--color-white);
-}
-
-section {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* Utility Class (Baseada na tipografia do Figma) */
-.text-secondary {
-    color: var(--color-gray-600);
-    font-family: 'Maven Pro', sans-serif;
+.title-sm {
+    font-family: 'Asap', sans-serif; 
     font-size: 16px;
-    line-height: 160%;
+    line-height: 120%; 
+    font-weight: bold;
 }
 
-/* ========================================================================= */
-/* 03. COMPONENTES REUTILIZÁVEIS */
-/* ========================================================================= */
-
-/* --- Componente Project Card --- */
-
-.project-card {
-    background-color: var(--color-gray-800);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    border: 1px solid transparent; /* Para o hover */
-    text-align: left;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-principal-roxo);
-}
-
-.project-image {
-    height: 200px;
-    background-color: var(--color-gray-700);
-    background-size: cover; /* Ajusta a imagem para cobrir a área */
-    background-position: center;
-}
-
-.project-details {
-    padding: 15px;
-}
-
-.project-details h3 {
-    font-family: 'Asap', sans-serif;
-    font-size: 1.5em;
-    margin-bottom: 5px;
-}
-
-.project-details p {
-    color: var(--color-gray-600);
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 1em;
-}
-
-
-/* --- Componente Social Button (Contato) --- */
-
-.contact-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    background-color: var(--color-gray-800);
-    color: var(--color-white);
-    padding: 15px 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid var(--color-gray-700);
-    transition: border-color 0.3s, background-color 0.3s;
-}
-
-.contact-link:hover {
-    border-color: var(--color-principal-roxo);
-    background-color: #252525;
-}
-
-.contact-link span {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 1em;
-}
-
-.contact-link i {
-    color: var(--color-principal-ciano);
-    font-size: 1.2em;
-}
-
-.contact-link span:last-child {
-    color: var(--color-gray-600);
-    font-size: 1.5em;
-}
-
-/* ========================================================================= */
-/* 04. SEÇÕES E LAYOUTS */
-/* ========================================================================= */
-
-/* --- SEÇÃO HERO --- */
-
-.hero-section {
-    position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    text-align: center;
-    /* Imagem de Fundo de Código */
-    background-image: url('assets/Background_Intro.png'); 
-    background-color: var(--color-gray-900);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-
-.hero-section .text-intro {
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: 400;
-    color: var(--color-gray-500);
-    font-size: 1.1em;
-    margin-bottom: 5px;
-}
-
-.hero-content {
-    max-width: 900px;
-    margin: 0 auto;
-    z-index: 10;
-    position: relative;
-    padding: 0 20px;
-}
-
-/* Estilo para a TAG IMG da Foto de Perfil */
-.profile-photo {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    border: 3px solid var(--color-borda-perfil); /* Borda rosa/vermelha */
-    margin: 0 auto 20px;
-    object-fit: cover;
-    display: block;
-}
-
-.hero-section h1 {
-    font-size: 3em;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.subtitle {
+    font-family: 'Inconsolata', monospace; 
+    font-size: 20px;
+    line-height: 120%; 
+    font-weight: 400; 
 }
 
 .subtitle-lg {
-    max-width: 700px;
-    margin: 20px auto 40px;
-    font-family: 'Maven Pro', sans-serif !important;
-    font-size: 1.1em;
-    color: var(--color-gray-600);
+    font-family: 'Inconsolata', monospace; 
+    font-size: 20px;
+    line-height: 120%; 
+    font-weight: 400; 
 }
 
-/* Badges de Habilidades */
+.text-md {
+    font-family: 'Maven Pro', sans-serif; 
+    font-size: 16px;
+    line-height: 140%; 
+    font-weight: 400; 
+}
+
+.text-sm {
+    font-family: 'Maven Pro', sans-serif; 
+    font-size: 14px;
+    line-height: 140%; 
+    font-weight: 400; 
+}
+
+.text-secondary {
+    color: var(--color-gray-300);
+}
+
+.info-profile strong {
+    color: var(--color-red);
+}
+
+body {
+    max-width: 1366px;
+    margin: 0 auto;
+    background-color: var(--color-gray-600);
+    color: var(--color-gray-100);
+    font-family: 'Maven Pro', sans-serif;
+}
+
+/* Estilos adicionais para os componentes mencionados no HTML */
+.hero-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
 .skills-badges {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 40px;
+    gap: 12px;
+    margin-top: 32px;
 }
 
 .badge {
-    background-color: var(--color-gray-400); 
-    color: var(--color-gray-500);
-    padding: 8px 15px;
+    background-color: var(--color-gray-400);
+    padding: 8px 16px;
     border-radius: 20px;
-    font-size: 0.9em;
-    border: 1px solid transparent; /* Borda roxa de destaque */
-    transition: background-color 0.3s;
-    font-family: 'Maven Pro', sans-serif;
+    font-size: 14px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
 }
 
-.badge i {
-    color: var(--color-principal-ciano);
+.projects-section, .services-section, .contact-section {
+    padding: 80px 20px;
 }
 
-
-
-
-/* --- SEÇÃO PROJETOS --- */
-
-.projects-section {
-    background-color: var(--color-gray-900);
-}
-
-.projects-grid {
+.projects-grid, .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 24px;
     margin-top: 40px;
 }
 
-/* Estilização específica das imagens dos projetos (Ajustado o caminho) */
-.project-image.project-1 {
-    background-image: url('assets/Thumbnail_Project-01.png');
+.project-card, .service-card {
+    background-color: var(--color-gray-500);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease;
 }
 
-.project-image.project-2 {
-    background-image: url('assets/Thumbnail_Project-02.png');
+.project-card:hover, .service-card:hover {
+    transform: translateY(-5px);
 }
 
-.project-image.project-3 {
-    background-image: url('assets/Thumbnail_Project-03.png');
-}
-
-.project-image.project-4 {
-    background-image: url('assets/Thumbnail_Project-04.png');
-}
-
-.project-image.project-5 {
-    background-image: url('assets/Thumbnail_Project-05.png');
-}
-
-.project-image.project-6 {
-    background-image: url('assets/Thumbnail_Project-06.png');
-}
-
-
-/* --- SEÇÃO SERVIÇOS --- */
-
-.services-section {
-    background-color: var(--color-gray-800);
-    border-top: 1px solid var(--color-gray-700);
-    border-bottom: 1px solid var(--color-gray-700);
-}
-
-.services-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.service-card {
-    background-color: var(--color-gray-900);
-    padding: 30px 20px;
-    width: 300px;
+.project-image {
+    height: 200px;
+    background-color: var(--color-gray-400);
     border-radius: 8px;
-    border: 1px solid var(--color-gray-700);
-    transition: border-color 0.3s, background-color 0.3s;
-    text-align: center;
-}
-
-.service-card:hover {
-    border-color: var(--color-principal-roxo);
+    margin-bottom: 16px;
 }
 
 .service-icon {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-}
-
-.service-card h3 {
-    font-size: 1.2em;
-    font-family: 'Asap', sans-serif;
-}
-
-
-/* --- SEÇÃO CONTATO --- */
-
-.contact-section {
-    background-color: var(--color-gray-900);
-    /* Imagem de Fundo de Código nos Contatos */
-    background-image: url('assets/Background_Contacts.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    font-size: 32px;
+    margin-bottom: 16px;
 }
 
 .contact-links {
-    max-width: 600px;
-    margin: 30px auto 0;
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
 }
 
-
-/* ========================================================================= */
-/* 05. RESPONSIVIDADE (MEDIA QUERIES) */
-/* ========================================================================= */
-
-@media (max-width: 768px) {
-    section {
-        padding: 30px 10px;
-        margin: 40px auto;
-    }
-
-    .hero-section h1 {
-        font-size: 2em;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 100%;
-        max-width: 400px;
-    }
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: var(--color-gray-500);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-gray-100);
+    transition: background-color 0.3s ease;
 }
+
+.contact-link:hover {
+    background-color: var(--color-gray-400);
+}
+
+ 
+ 
