@@ -14,16 +14,13 @@
     --color-gray-500: #16181D;
     --color-gray-600: #0D0E11;
 
-    /* Cores usadas nos serviços (adicionadas para consistência) */
-    --color-principal-roxo: #BB72E9;
-    --color-principal-ciano: #3996DB;
-    --color-principal-verde: #82BC4F;
+   
 }
 
 /* Importando a fonte Maven Pro que estava faltando */
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap');*/
 
-/* Tipografia */
+
 .title-lg {
     font-family: 'Asap', sans-serif;
     font-size: 56px;
@@ -73,110 +70,10 @@
     font-weight: 400; 
 }
 
-.text-secondary {
-    color: var(--color-gray-300);
-}
 
-.info-profile strong {
-    color: var(--color-red);
-}
 
-body {
-    max-width: 1366px;
-    margin: 0 auto;
-    background-color: var(--color-gray-600);
-    color: var(--color-gray-100);
-    font-family: 'Maven Pro', sans-serif;
-}
 
-/* Estilos adicionais para os componentes mencionados no HTML */
-.hero-section {
-    padding: 80px 20px;
-    text-align: center;
-}
 
-.profile-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 20%;
-    object-fit: cover;
-    margin-bottom: 24px;
-}
-
-.skills-badges {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 32px;
-}
-
-.badge {
-    background-color: var(--color-gray-400);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.projects-section, .services-section, .contact-section {
-    padding: 80px 20px;
-}
-
-.projects-grid, .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
-}
-
-.project-card, .service-card {
-    background-color: var(--color-gray-500);
-    border-radius: 12px;
-    padding: 20px;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover, .service-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-image {
-    height: 200px;
-    background-color: var(--color-gray-400);
-    border-radius: 8px;
-    margin-bottom: 16px;
-}
-
-.service-icon {
-    font-size: 32px;
-    margin-bottom: 16px;
-}
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 32px;
-}
-
-.contact-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    background-color: var(--color-gray-500);
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--color-gray-100);
-    transition: background-color 0.3s ease;
-}
-
-.contact-link:hover {
-    background-color: var(--color-gray-400);
-}
 
  
  
