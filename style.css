@@ -73,6 +73,39 @@
 
 
 
+.skills-badges {
+    display: flex;
+    justify-content: center;
+    border-radius: 62rem;
+    flex-wrap: block;
+    gap: 16px ;
+    margin-top: 80px;
+    
+   
+}
+
+
+.badge {
+    display: flex;
+    background-color: var(--color-gray-400);
+    color: var(--color-gray-200);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 104px;
+    padding:16px 8px;
+    gap: 8px;
+    border-radius: 62rem;
+    
+}
+
+
+.hero-section {
+    background-image: url(assets/Background_Intro.png); 
+    color: var(--color-gray-200); 
+     
+}
+
 
 
  
