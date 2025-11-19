@@ -14,14 +14,7 @@
     --color-gray-500: #16181D;
     --color-gray-600: #0D0E11;
 
-   
-}
-
-/* Importando a fonte Maven Pro que estava faltando */
-/*@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap');*/
-
-
-.title-lg {
+  .title-lg {
     font-family: 'Asap', sans-serif;
     font-size: 56px;
     line-height: 120%; 
@@ -49,12 +42,6 @@
     font-weight: 400; 
 }
 
-.subtitle-lg {
-    font-family: 'Inconsolata', monospace; 
-    font-size: 20px;
-    line-height: 120%; 
-    font-weight: 400; 
-}
 
 .text-md {
     font-family: 'Maven Pro', sans-serif; 
@@ -68,7 +55,31 @@
     font-size: 14px;
     line-height: 140%; 
     font-weight: 400; 
+} 
 }
+
+
+body {
+  background-color: var(--color-gray-500);
+  display: block;
+  text-align: center;
+  margin: 0; /* Remove margens padrão */
+  padding: 0;
+}
+/* Importando a fonte Maven Pro que estava faltando */
+/*@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap');*/
+.hero-section {
+    background: url(assets/Background_Intro.png) center 25%/contain no-repeat;
+    color: var(--color-gray-200);
+     min-height: 100vh;
+   
+}
+
+.name {
+    color: var(--color-red);
+}
+
+
 
 
 
@@ -99,12 +110,15 @@
     
 }
 
-
-.hero-section {
-    background-image: url(assets/Background_Intro.png); 
-    color: var(--color-gray-200); 
-     
+.next-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 94px; /* Ajuste este valor para baixar mais ou menos */
 }
+
+
+
 
 
 
