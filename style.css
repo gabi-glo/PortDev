@@ -72,7 +72,7 @@ body {
     background: url(assets/Background_Intro.png) center 25%/contain no-repeat;
     color: var(--color-gray-200);
      min-height: 100vh;
-   
+    
 }
 
 .name {
@@ -114,10 +114,76 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 94px; /* Ajuste este valor para baixar mais ou menos */
+    margin-top: 150px; /* Ajuste este valor para baixar mais ou menos */
+    padding: 94px;
 }
 
 
+/* --- Seção Meu Trabalho  */
+.work-section {
+    background-color: var(--color-gray-500); 
+    color: var(--color-gray-200);
+    
+    padding: 120px 72px 144px; 
+    text-align: center; 
+    max-width: 100vw; 
+    margin: 0 auto;
+    
+}
+
+/* Títulos e Subtítulos da seção */
+.work-section .title-md {
+    margin-bottom: 8px; 
+    color: var(--color-red); 
+}
+
+.work-section .subtitle {
+    margin-bottom: 56px; 
+    color: var(--color-gray-100); 
+}
+
+/* Contêiner do Grid de Projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 56px; /* Gap entre os projetos conforme a imagem */
+    max-width: 1080px; 
+    margin: 0 auto; 
+}
+
+/* Card de Projeto Individual: MANTIDO */
+.project-card {
+    background-color: var(--color-gray-400); 
+    border-radius: 8px; 
+    text-align: left; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column;
+    height: 100%; 
+}
+
+.project-card img {
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0; 
+    margin-bottom: 16px; 
+}
+
+.project-card .title-sm {
+    color: var(--color-gray-100); 
+    padding: 0 16px; 
+    margin-bottom: 8px; 
+}
+
+.project-card .text-sm {
+    color: var(--color-gray-300); 
+    padding: 0 16px 16px; 
+    flex-grow: 1; 
+}
+
+/* REMOVIDO: O pseudo-elemento ::before (que criava a linha tracejada) */
+/* REMOVIDAS: Regras de mídia (responsividade) para manter o foco na simplificação do corpo principal */
 
 
 
