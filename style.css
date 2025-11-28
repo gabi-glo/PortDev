@@ -182,8 +182,148 @@ body {
     flex-grow: 1; 
 }
 
-/* REMOVIDO: O pseudo-elemento ::before (que criava a linha tracejada) */
-/* REMOVIDAS: Regras de mídia (responsividade) para manter o foco na simplificação do corpo principal */
+/* --- Seção Meus Serviços --- */
+#meus-servicos {
+    background-color: var(--color-gray-600);
+    padding: 120px 120px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.container-servicos {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+/* Estilo dos Títulos */
+.subtitulo-servicos {
+    color: #E35E81;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-family: 'Asap', sans-serif;
+}
+
+.titulo-servicos {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-family: 'Asap', sans-serif;
+}
+
+/* Grid de Serviços */
+.servicos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+    flex-wrap: wrap;
+}
+
+/* CORREÇÃO: Cards com box-sizing border-box */
+.servico-card {
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 32px 24px;
+    flex: 1 1 calc(33.333% - 37.333px);
+    min-width: 280px;
+    max-width: 350px;
+    text-align: left;
+    /* BOX-SIZING ADICIONADO */
+    box-sizing: border-box;
+}
+
+.icone-box {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    /* BOX-SIZING para consistência */
+    box-sizing: border-box;
+}
+
+/*.servico-card:nth-child(1) .icone-box {
+    background-color: #5d3a90;
+}
+
+.servico-card:nth-child(2) .icone-box {
+    background-color: #d8981c;
+}
+
+.servico-card:nth-child(3) .icone-box {
+    background-color: #4a8d40;
+}
+    */
+
+.icone-box img {
+    width: 24px;
+    height: 24px;
+}
+
+.card-titulo {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.card-descricao {
+    color: #a0a0a0;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .servico-card {
+        flex: 1 1 calc(50% - 28px);
+        max-width: calc(50% - 28px);
+    }
+}
+
+@media (max-width: 768px) {
+    #meus-servicos {
+        padding: 80px 30px;
+    }
+    
+    .servico-card {
+        flex: 1 1 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .titulo-servicos {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .servicos-grid {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    #meus-servicos {
+        padding: 60px 20px;
+    }
+    
+    .servico-card {
+        min-width: 100%;
+        padding: 24px 20px; /* Padding reduzido para mobile */
+    }
+}
+
+/* BÔNUS: Reset global de box-sizing para todo o projeto */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 
 
